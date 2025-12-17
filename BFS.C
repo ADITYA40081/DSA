@@ -2,44 +2,52 @@
 int q[20]={0};
 int front=-1,rear=-1;
 
+int v[20]={0};
+int arr[20][20],n;
+int u;
+void bfs(int start){
+    v[start]=1;
+    q[++rear]=start;
+
+
+
+    while(front<=rear){
+        u=q[++front];
+        printf("%d \n",u);
+
+
+        for(int i=1;i<=n;i++){
+            if(arr[u][i]==1 && v[i]==0){
+                q[++rear]=i;
+                v[i]=1;
+            }
+        }}
+    }
+    
 
 
 
 
 int main(){
-    int n;
+    
     printf("enter the no of vertices ");
     scanf("%d",&n);
-    int arr[n][n];
-    int v[n];
-    for(int i=0;i<n;i++){
-        for(int j=0;j<n;j++){
+    for(int i=1;i<=n;i++){
+        for(int j=1;j<=n;j++){
             scanf("%d",&arr[i][j]);
+        }
+        //printf("\n");
+    }
+
+
+    for(int i=1;i<=n;i++){
+        for(int j=1;j<=n;j++){
+            printf("%d",arr[i][j]);
         }
         printf("\n");
     }
-    printf("enter the starting node ");
-    int start;
-    scanf("%d",&start);
 
-    q[++rear]=start;
-    v[0]=start;
-
-    while(front<=rear){
-        int u=q[++front];
-        printf("%d",u);
-        for(int i=1;i<=n;i++){
-            if(arr[u][i]==1 && v[i]==0){
-                v[i]==1;
-                q[++rear]=i;
-            }
-        }
-    }
-
-
-
-
-
+    bfs(1);
 
 return 0;
 
