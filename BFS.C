@@ -31,27 +31,26 @@ void bfs(int start){
 
 
     void DFS(int start){
-
-        int v[20]={0};
         int stack[20];
+        int v[20]={0};
         int top=-1;
 
         stack[++top]=start;
         v[start]=1;
-    while(top!=-1){
-        int u=stack[top--];
-        printf("%d",u);
-    for(int i=n;i>0;i--){
-    
 
-        if(arr[u][i]==1 && v[i]==0 ){
-            stack[++top]=i;
-            v[i]=1;
+        while(top>-1){
+            int u=stack[top--];
+            printf("%d ",u);
+
+            for(int i=n;i>0;i--){
+                if(arr[u][i]==1 && v[i]==0){
+                    stack[++top]=i;
+                    v[i]=1;
+                }
+            }
+
         }
-
-
-    }}}
-
+    }
 int main(){
     
     printf("enter the no of vertices ");
