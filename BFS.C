@@ -5,6 +5,8 @@ int front=-1,rear=-1;
 int v[20]={0};
 int arr[20][20],n;
 int u;
+
+
 void bfs(int start){
     v[start]=1;
     q[++rear]=start;
@@ -28,6 +30,28 @@ void bfs(int start){
 
 
 
+    void DFS(int start){
+
+        int v[20]={0};
+        int stack[20];
+        int top=-1;
+
+        stack[++top]=start;
+        v[start]=1;
+    while(top!=-1){
+        int u=stack[top--];
+        printf("%d",u);
+    for(int i=n;i>0;i--){
+    
+
+        if(arr[u][i]==1 && v[i]==0 ){
+            stack[++top]=i;
+            v[i]=1;
+        }
+
+
+    }}}
+
 int main(){
     
     printf("enter the no of vertices ");
@@ -47,8 +71,8 @@ int main(){
         printf("\n");
     }
 
-    bfs(1);
-
+    //bfs(1);
+    DFS(1);
 return 0;
 
 }
