@@ -5,6 +5,48 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "type": "java",
+            "name": "right_aligned_triangle",
+            "request": "launch",
+            "mainClass": "right_aligned_triangle",
+            "projectName": "DSA_aff12070"
+        },
+        {
+            "type": "java",
+            "name": "pattern",
+            "request": "launch",
+            "mainClass": "pattern",
+            "projectName": "DSA_aff12070"
+        },
+        {
+            "type": "java",
+            "name": "for_loop",
+            "request": "launch",
+            "mainClass": "for_loop",
+            "projectName": "DSA_aff12070"
+        },
+        {
+            "type": "java",
+            "name": "month_of_year",
+            "request": "launch",
+            "mainClass": "month_of_year",
+            "projectName": "DSA_aff12070"
+        },
+        {
+            "type": "java",
+            "name": "student_age",
+            "request": "launch",
+            "mainClass": "student_age",
+            "projectName": "DSA_aff12070"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "Main",
+            "projectName": "DSA_aff12070"
+        },
+        {
             "name": "Attach to Chrome",
             "port": 9222,
             "request": "attach",
@@ -99,6 +141,5 @@
                 }
             ]
         }
-
     ]
 }
